@@ -1,2 +1,3 @@
 # XMPermission
-a easy API to use runtime permission for Android M
+简单易用的处理Android M运行时权限的库
+

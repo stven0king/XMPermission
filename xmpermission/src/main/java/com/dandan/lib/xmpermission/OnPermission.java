@@ -8,7 +8,14 @@ import java.util.List;
  * Description:
  */
 public interface OnPermission {
+    /**
+     * 本次申请的权限全部通过
+     */
     void hasPermission();
 
+    /**
+     * 本次申请的权限没有全部通过
+     * @param granteds
+     */
     void noPermission(List<PermissionState> granteds);
 }

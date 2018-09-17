@@ -9,14 +9,12 @@ import java.util.List;
 /**
  * Created by Tanzhenxing
  * Date: 2018/9/12 下午5:13
- * Description:
+ * Description: 申请权限状态
  */
 public class PermissionState implements Parcelable {
 
     private String name;
     private boolean granted;
-
-
 
     public String getName() {
         return name;

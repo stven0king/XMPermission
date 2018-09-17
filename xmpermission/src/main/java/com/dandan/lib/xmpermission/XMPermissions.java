@@ -41,6 +41,9 @@ public final class XMPermissions {
         return this;
     }
 
+    /**
+     * 设置权限组
+     */
     public Observable<List<PermissionState>> request(final String[]... permissions) {
         for (String[] group : permissions) {
             mPermissions.addAll(Arrays.asList(group));
@@ -48,11 +51,18 @@ public final class XMPermissions {
         return create();
     }
 
+    /**
+     * 设置权限组
+     */
     public Observable<List<PermissionState>> request(final String... permissions) {
         mPermissions.addAll(Arrays.asList(permissions));
         return create();
     }
 
+    /**
+     * 创建可观察对象
+     * @return
+     */
     private Observable<List<PermissionState>> create() {
         return Observable.just(TRIGGER)
                 .flatMap(new Func1<Object, Observable<List<PermissionState>>>() {
@@ -64,6 +74,10 @@ public final class XMPermissions {
     }
 
 
+    /**
+     * 申请观察对象
+     * @return
+     */
     private Observable<List<PermissionState>> requestImplementation() {
         ArrayList<String> failPermissions = PermissionUtils.getFailPermissions(mActivity, mPermissions);
         final List<PermissionState> permissionStateList = PermissionUtils.getGrantedPermissions(mPermissions);
@@ -124,6 +138,10 @@ public final class XMPermissions {
         }
     }
 
+    /**
+     * 检验参数
+     * @param call
+     */
     public void checkNull(OnPermission call) {
         if (mPermissions == null || mPermissions.size() == 0) {
             throw new IllegalArgumentException("The requested permission cannot be empty");
