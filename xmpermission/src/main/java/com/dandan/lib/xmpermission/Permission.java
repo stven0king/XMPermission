@@ -66,6 +66,10 @@ public final class Permission {
         public static final String[] STORAGE = new String[]{
                 Permission.READ_EXTERNAL_STORAGE,
                 Permission.WRITE_EXTERNAL_STORAGE};
+        //电话
+        public static final String[] PHONE = new String[] {
+                Permission.READ_PHONE_STATE
+        };
     }
 
 

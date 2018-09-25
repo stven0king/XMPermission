@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void requestPermissionRx(View view) {
         XMPermissions.with(this)
-                .request(Permission.Group.STORAGE, Permission.Group.CALENDAR)
+                .request(Permission.Group.STORAGE, Permission.Group.PHONE)
                 .subscribe(new SimpleSubscriber<List<PermissionState>>() {
                     @Override
                     public void onNext(List<PermissionState> permissionStates) {
