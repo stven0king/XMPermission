@@ -69,6 +69,12 @@ public final class Permission {
         //电话
         public static final String[] PHONE = new String[] {
                 Permission.READ_PHONE_STATE
+                //Permission.CALL_PHONE,
+                //Permission.READ_CALL_LOG,
+                //Permission.WRITE_CALL_LOG,
+                //Permission.ADD_VOICEMAIL,
+                //Permission.USE_SIP,
+                //Permission.PROCESS_OUTGOING_CALLS,
         };
     }
 
