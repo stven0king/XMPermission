@@ -34,7 +34,7 @@ tasks.withType(Javadoc){
 
 publish {
     userOrg = 'stven0king'      //bintray注册的用户名
-    groupId = 'com.dandan.lib'         //compile引用时的第1部分groupId
+    groupId = 'com.tzx.lib'         //compile引用时的第1部分groupId
     artifactId = 'xmpermission'     //compile引用时的第2部分项目名
     publishVersion = '1.0.0'    //compile引用时的第3部分版本号
     desc = 'a easy API to use runtime permission for Android M'
