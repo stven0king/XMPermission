@@ -1,3 +1,6 @@
+
+# [Android6.0动态权限适配&XMPermissions](http://dandanlove.com/2018/09/29/permissions/)
+
 # XMPermission
 简单易用的处理Android M运行时权限的库, `XMPermission` 意味对 [XXPermissions](https://github.com/getActivity/XXPermissions) 项目的二次开发。
 
