@@ -1,7 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 15
@@ -22,8 +23,26 @@ android {
 
 }
 
+//如果你的项目里面有中文注释的话，必须将格式设置为UTF-8，不然会出现乱码
+tasks.withType(Javadoc){
+    options{
+        encoding 'UTF-8'
+        charSet 'UTF-8'
+        links "http://docs.oracle.com/javase/8/docs/api"
+    }
+}
+
+publish {
+    userOrg = 'stven0king'      //bintray注册的用户名
+    groupId = 'com.dandan.lib'         //compile引用时的第1部分groupId
+    artifactId = 'xmpermission'     //compile引用时的第2部分项目名
+    publishVersion = '1.0.0'    //compile引用时的第3部分版本号
+    desc = 'a easy API to use runtime permission for Android M'
+    website = 'https://github.com/stven0king/XMPermission'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'io.reactivex:rxandroid:1.2.0'
 }
